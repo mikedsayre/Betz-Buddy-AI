@@ -1,0 +1,14 @@
+---
+description: Betz Buddy laws for math, odds data, and agent memory
+alwaysApply: true
+---
+
+# Betz Buddy foundation
+
+- Read `AGENTS.md` and `docs/03-delivery/01-mvp-scope.md` before feature work. Follow the accepted math locks and `docs/01-foundation/07-model-desk.md`.
+- Put odds math only in `src/lib/quant.ts`. EV and Kelly take fair probability and decimal odds. Do not recompute from rounded American prices.
+- Verify rows with a second pure function before display. On mismatch, drop the row.
+- Models may explain a verified payload. Gemini uses `@google/genai`. Desk numbers always render from that payload. Do not assert injuries or news that are not in the payload. A TypeScript policy seats models; send an id only after the provider’s live list confirms it, and show why that seat was chosen.
+- Do not claim an AI betting advantage. One finished game does not grade the desk. Do not add team history, player history, or a luck factor as a second probability. D-027 records the pause on 2026-10-19 and the Arizona Cardinals result.
+- Fetch odds on explicit user action. No polling loops. Keep `ODDS_API_KEY`, `GEMINI_API_KEY`, `OPENAI_API_KEY`, and `ANTHROPIC_API_KEY` server-side.
+- When a formula, pairing rule, or architecture choice changes, update `docs/01-foundation/`, append `docs/00-charter/02-decision-log.md`, and update tests in the same change.
